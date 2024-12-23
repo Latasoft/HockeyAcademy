@@ -66,7 +66,7 @@ export default function Contacto() {
                                     <div className={`grid grid-cols-1 sm:grid-cols-2 gap-8 mb-5`}>
                                         <input className={`flex-1 border-b-2 border-solid border-white bg-transparent p-1 lg:p-2 xl:p-3 focus:outline-none appearance-none placeholder:text-white `} type='text' placeholder='Nombre' />
                                         <input className={`flex-1 border-b-2 border-solid border-white bg-transparent p-1 lg:p-2 xl:p-3 focus:outline-none placeholder:text-white `} type='text' placeholder='Apellido' />
-                                        <input className={`flex-1 border-b-2 border-solid border-white bg-transparent p-1 lg:p-2 xl:p-3 focus:outline-none appearance-none placeholder:text-white `} type='email' placeholder='Correo electrónico' />
+                                        <input className={`flex-1 border-b-2 border-solid border-white bg-transparent p-1 lg:p-2 xl:p-3 focus:outline-none appearance-none placeholder:text-white `} name='email' id='email' type='email' placeholder='Correo electrónico' />
                                         <input className={`flex-1 border-b-2 border-solid border-white bg-transparent p-1 lg:p-2 xl:p-3 focus:outline-none appearance-none placeholder:text-white `} type='tel' placeholder='Número de teléfono' />
                                     </div>
                                     <div className={`mb-5`}>
