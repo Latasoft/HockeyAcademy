@@ -60,7 +60,7 @@ export default function Contacto() {
                     <section className={`relative bg-transparent py-0 mt-16 md:mt-0 `}>
                         <div className={`max-w-3xl mx-auto flex justify-center items-center`}>
                             <div className={`bg-[#37678c] bg-opacity-60 px-8 shadow-lg w-full backdrop-blur-sm `}>
-                                <h2 data-aos-once="true" data-aos="fade-up" className={`text-center font-BebasNeue text-[#00445f] text-3xl md:text-4xl lg:text-5xl xl:text-6xl mt-12 mx-8 mb-6 uppercase`}>
+                                <h2 data-aos-once="true" data-aos="fade-up" className={`text-center font-BebasNeue text-[#00445f] text-2xl md:text-3xl lg:text-4xl xl:text-5xl mt-12 mx-8 mb-6 uppercase`}>
                                     Su mensaje ha sido enviado. Gracias por contactarnos.
                                 </h2>
                                 <hr data-aos-once="true" data-aos="flip-left" className={`block mx-auto h-1 max-w-20 border-none bg-[#5fd2ff] mb-8`} />
@@ -117,7 +117,7 @@ export default function Contacto() {
                                         </span>
                                     </label>
                                     <p className={`block mt-8 text-center`}>
-                                        <input type='submit' disabled={state.submitting} className={`cursor-pointer inline-block mx-auto py-2 px-6 md:py-3 md:px-8 lg:py-3 lg:px-10 xl:py-3 xl:px-10 bg-otoFondoRatioFondo hover:bg-otoFondoRatioFondoHover rounded-md border-none shadow-black shadow-sm transition-all ease-in-out duration-500 text-white `} value='Enviar mensaje' />
+                                        <button value="Enviar mensaje" type="submit" disabled={state.submitting} className={`cursor-pointer inline-block mx-auto py-2 px-6 md:py-3 md:px-8 lg:py-3 lg:px-10 xl:py-3 xl:px-10 bg-otoFondoRatioFondo hover:bg-otoFondoRatioFondoHover rounded-md border-none shadow-black shadow-sm transition-all ease-in-out duration-500 text-white `} />
                                         <ValidationError errors={state.errors} />
                                     </p>
                                 </form>
