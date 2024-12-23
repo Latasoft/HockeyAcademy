@@ -1,12 +1,15 @@
 'use client';
 import { useState, useEffect } from 'react';
 import Cargador from 'components/cargador';
-import Image from 'next/image';
+
 import contactoFondo from 'public/hockeyacademycamp/hockeyacademycamp_contacto_fondo_b_.jpg';
+import { useForm, ValidationError } from "@formspree/react";
+
 
 import PlantillaUno from "components/plantillauno";
 
 export default function Contacto() {
+    const [state, handleSubmit] = useForm("mzzbqrly");
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
@@ -22,11 +25,11 @@ export default function Contacto() {
         return Promise.all(
           imageSources.map((src) => {
             return new Promise((resolve, reject) => {
-              // Extract the src if the image is an object (imported asset)
+              
               const imageSrc = typeof src === 'string' ? src : src?.src;
               if (!imageSrc) {
                 console.error('Invalid image source:', src);
-                resolve(); // Resolve even if invalid to avoid blocking
+                resolve();
                 return;
               }
       
@@ -35,7 +38,7 @@ export default function Contacto() {
               img.onload = resolve;
               img.onerror = (error) => {
                 console.error(`Failed to preload image: ${imageSrc}`, error);
-                resolve(); // Resolve even on error to avoid blocking
+                resolve();
               };
             });
           })
@@ -61,12 +64,12 @@ export default function Contacto() {
                                 </h2>
                                 <hr data-aos-once="true" data-aos="flip-left" className={`block mx-auto h-1 max-w-20 border-none bg-[#5fd2ff] mb-8`} />
                                 <form className={`pb-12 px-6 gx:px-0  text-white font-Roboto text-base gx:text-lg`}
-                                    action="https://formspree.io/f/mzzbqrly"
-                                    method="POST">
+                                    onSubmit={handleSubmit}>
                                     <div className={`grid grid-cols-1 sm:grid-cols-2 gap-8 mb-5`}>
                                         <input className={`flex-1 border-b-2 border-solid border-white bg-transparent p-1 lg:p-2 xl:p-3 focus:outline-none appearance-none placeholder:text-white `} type='text' placeholder='Nombre' />
                                         <input className={`flex-1 border-b-2 border-solid border-white bg-transparent p-1 lg:p-2 xl:p-3 focus:outline-none placeholder:text-white `} type='text' placeholder='Apellido' />
                                         <input className={`flex-1 border-b-2 border-solid border-white bg-transparent p-1 lg:p-2 xl:p-3 focus:outline-none appearance-none placeholder:text-white `} name='email' id='email' type='email' placeholder='Correo electrónico' />
+                                        <ValidationError prefix="Email" field="email" errors={state.errors} />
                                         <input className={`flex-1 border-b-2 border-solid border-white bg-transparent p-1 lg:p-2 xl:p-3 focus:outline-none appearance-none placeholder:text-white `} type='tel' placeholder='Número de teléfono' />
                                     </div>
                                     <div className={`mb-5`}>
@@ -81,6 +84,7 @@ export default function Contacto() {
                                         </select>
                                     </div>
                                     <textarea className={`block mt-5 w-full border-2 border-solid border-white bg-transparent p-2 md:p-3 lg:p-4 xl:p-4 focus:outline-none placeholder:text-white `} rows='6' placeholder='Mensaje' id='message' name='message'></textarea>
+                                    <ValidationError prefix="Message" field="message" errors={state.errors} />
 
                                     <label className={` mt-5 text-white whitespace-normal flex flex-row `} htmlFor='privacidadPoliticas'>
                                         <span className={` block mr-3 mt-1 w-5 h-5 border-2 border-solid border-white bg-transparent`}>
@@ -91,7 +95,8 @@ export default function Contacto() {
                                         </span>
                                     </label>
                                     <p className={`block mt-8 text-center`}>
-                                        <input type='submit' className={`cursor-pointer inline-block mx-auto py-2 px-6 md:py-3 md:px-8 lg:py-3 lg:px-10 xl:py-3 xl:px-10 bg-otoFondoRatioFondo hover:bg-otoFondoRatioFondoHover rounded-md border-none shadow-black shadow-sm transition-all ease-in-out duration-500 text-white `} value='Enviar mensaje' />
+                                        <input type='submit' disabled={state.submitting} className={`cursor-pointer inline-block mx-auto py-2 px-6 md:py-3 md:px-8 lg:py-3 lg:px-10 xl:py-3 xl:px-10 bg-otoFondoRatioFondo hover:bg-otoFondoRatioFondoHover rounded-md border-none shadow-black shadow-sm transition-all ease-in-out duration-500 text-white `} value='Enviar mensaje' />
+                                        <ValidationError errors={state.errors} />
                                     </p>
                                 </form>
                             </div>

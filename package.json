@@ -9,6 +9,7 @@
         "lint": "next lint"
     },
     "dependencies": {
+        "@formspree/react": "^2.5.1",
         "@netlify/blobs": "^8.0.0",
         "aos": "^2.3.4",
         "blobshape": "^1.0.0",
