@@ -117,7 +117,7 @@ export default function Contacto() {
                                         </span>
                                     </label>
                                     <p className={`block mt-8 text-center`}>
-                                        <button value="Enviar mensaje" type="submit" disabled={state.submitting} className={`cursor-pointer inline-block mx-auto py-2 px-6 md:py-3 md:px-8 lg:py-3 lg:px-10 xl:py-3 xl:px-10 bg-otoFondoRatioFondo hover:bg-otoFondoRatioFondoHover rounded-md border-none shadow-black shadow-sm transition-all ease-in-out duration-500 text-white `} />
+                                        <button type="submit" disabled={state.submitting} className={`cursor-pointer inline-block mx-auto py-2 px-6 md:py-3 md:px-8 lg:py-3 lg:px-10 xl:py-3 xl:px-10 bg-otoFondoRatioFondo hover:bg-otoFondoRatioFondoHover rounded-md border-none shadow-black shadow-sm transition-all ease-in-out duration-500 text-white `}>Enviar mensaje</button>
                                         <ValidationError errors={state.errors} />
                                     </p>
                                 </form>
