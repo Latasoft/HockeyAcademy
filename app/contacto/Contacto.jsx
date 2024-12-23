@@ -59,11 +59,11 @@ export default function Contacto() {
 
                         <section className={`relative bg-transparent py-0 mt-16 md:mt-0 `}>
                             <div className={`max-w-3xl mx-auto flex justify-center items-center`}>
-                                <div className={`bg-[#37678c] bg-opacity-60 px-8 shadow-lg w-full backdrop-blur-sm `}>
-                                    <h2 data-aos-once="true" data-aos="fade-up" className={`text-center font-BebasNeue text-[#00445f] text-2xl md:text-3xl lg:text-4xl xl:text-5xl mt-12 mx-8 mb-6 uppercase`}>
-                                        Su mensaje ha sido enviado. Gracias por contactarnos.
+                                <div className={`bg-[#37678c] bg-opacity-60 px-8 shadow-lg w-full backdrop-blur-sm h-screen flex flex-col items-center justify-center `}>
+                                    <h2 data-aos-once="true" data-aos="fade-up" className={`text-center font-BebasNeue text-[#00445f] text-2xl md:text-3xl lg:text-4xl xl:text-5xl my-12 mx-8 uppercase `}>
+                                        Su mensaje ha sido enviado.<br/>
+                                        Gracias por contactarnos.
                                     </h2>
-                                    <hr data-aos-once="true" data-aos="flip-left" className={`block mx-auto h-1 max-w-20 border-none bg-[#5fd2ff] mb-8`} />
                                 </div>
                             </div>
                         </section>
