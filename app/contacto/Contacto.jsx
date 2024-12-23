@@ -80,7 +80,7 @@ export default function Contacto() {
                                             <option value='hockey-academy-otro'>Otro</option>
                                         </select>
                                     </div>
-                                    <textarea className={`block mt-5 w-full border-2 border-solid border-white bg-transparent p-2 md:p-3 lg:p-4 xl:p-4 focus:outline-none placeholder:text-white `} rows='6' placeholder='Mensaje'></textarea>
+                                    <textarea className={`block mt-5 w-full border-2 border-solid border-white bg-transparent p-2 md:p-3 lg:p-4 xl:p-4 focus:outline-none placeholder:text-white `} rows='6' placeholder='Mensaje' id='message' name='message'></textarea>
 
                                     <label className={` mt-5 text-white whitespace-normal flex flex-row `} htmlFor='privacidadPoliticas'>
                                         <span className={` block mr-3 mt-1 w-5 h-5 border-2 border-solid border-white bg-transparent`}>
