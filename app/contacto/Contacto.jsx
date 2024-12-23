@@ -49,6 +49,28 @@ export default function Contacto() {
         return <Cargador />;
     }
 
+    if (state.succeeded) {
+
+        <PlantillaUno
+            contentc={
+                <>
+                    <div className={`absolute w-full h-full bg-otoContactoGradient `} />
+                    <div className={`absolute w-full h-full opacity-50 bg-cover bg-center bg-no-repeat grayscale `} style={{ backgroundImage: `url(${contactoFondo.src})` }} />
+
+                    <section className={`relative bg-transparent py-0 mt-16 md:mt-0 `}>
+                        <div className={`max-w-3xl mx-auto flex justify-center items-center`}>
+                            <div className={`bg-[#37678c] bg-opacity-60 px-8 shadow-lg w-full backdrop-blur-sm `}>
+                                <h2 data-aos-once="true" data-aos="fade-up" className={`text-center font-BebasNeue text-[#00445f] text-3xl md:text-4xl lg:text-5xl xl:text-6xl mt-12 mx-8 mb-6 uppercase`}>
+                                    Su mensaje ha sido enviado. Gracias por contactarnos.
+                                </h2>
+                                <hr data-aos-once="true" data-aos="flip-left" className={`block mx-auto h-1 max-w-20 border-none bg-[#5fd2ff] mb-8`} />
+                            </div>
+                        </div>
+                    </section>
+                </>
+            } />
+      }
+    
     return (
         <PlantillaUno
             contentc={
