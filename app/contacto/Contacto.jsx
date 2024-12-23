@@ -16,61 +16,63 @@ export default function Contacto() {
 
         const imageSources = [
             contactoFondo
-          ];
+        ];
 
         preloadImages(imageSources).then(() => setLoading(false));
     }, []);
 
     const preloadImages = (imageSources) => {
         return Promise.all(
-          imageSources.map((src) => {
-            return new Promise((resolve, reject) => {
-              
-              const imageSrc = typeof src === 'string' ? src : src?.src;
-              if (!imageSrc) {
-                console.error('Invalid image source:', src);
-                resolve();
-                return;
-              }
-      
-              const img = new window.Image();
-              img.src = imageSrc;
-              img.onload = resolve;
-              img.onerror = (error) => {
-                console.error(`Failed to preload image: ${imageSrc}`, error);
-                resolve();
-              };
-            });
-          })
+            imageSources.map((src) => {
+                return new Promise((resolve, reject) => {
+
+                    const imageSrc = typeof src === 'string' ? src : src?.src;
+                    if (!imageSrc) {
+                        console.error('Invalid image source:', src);
+                        resolve();
+                        return;
+                    }
+
+                    const img = new window.Image();
+                    img.src = imageSrc;
+                    img.onload = resolve;
+                    img.onerror = (error) => {
+                        console.error(`Failed to preload image: ${imageSrc}`, error);
+                        resolve();
+                    };
+                });
+            })
         );
-      };
+    };
 
     if (loading) {
         return <Cargador />;
     }
 
     if (state.succeeded) {
+        return (
+            <PlantillaUno
+                contentc={
+                    <>
+                        <div className={`absolute w-full h-full bg-otoContactoGradient `} />
+                        <div className={`absolute w-full h-full opacity-50 bg-cover bg-center bg-no-repeat grayscale `} style={{ backgroundImage: `url(${contactoFondo.src})` }} />
 
-        <PlantillaUno
-            contentc={
-                <>
-                    <div className={`absolute w-full h-full bg-otoContactoGradient `} />
-                    <div className={`absolute w-full h-full opacity-50 bg-cover bg-center bg-no-repeat grayscale `} style={{ backgroundImage: `url(${contactoFondo.src})` }} />
-
-                    <section className={`relative bg-transparent py-0 mt-16 md:mt-0 `}>
-                        <div className={`max-w-3xl mx-auto flex justify-center items-center`}>
-                            <div className={`bg-[#37678c] bg-opacity-60 px-8 shadow-lg w-full backdrop-blur-sm `}>
-                                <h2 data-aos-once="true" data-aos="fade-up" className={`text-center font-BebasNeue text-[#00445f] text-2xl md:text-3xl lg:text-4xl xl:text-5xl mt-12 mx-8 mb-6 uppercase`}>
-                                    Su mensaje ha sido enviado. Gracias por contactarnos.
-                                </h2>
-                                <hr data-aos-once="true" data-aos="flip-left" className={`block mx-auto h-1 max-w-20 border-none bg-[#5fd2ff] mb-8`} />
+                        <section className={`relative bg-transparent py-0 mt-16 md:mt-0 `}>
+                            <div className={`max-w-3xl mx-auto flex justify-center items-center`}>
+                                <div className={`bg-[#37678c] bg-opacity-60 px-8 shadow-lg w-full backdrop-blur-sm `}>
+                                    <h2 data-aos-once="true" data-aos="fade-up" className={`text-center font-BebasNeue text-[#00445f] text-2xl md:text-3xl lg:text-4xl xl:text-5xl mt-12 mx-8 mb-6 uppercase`}>
+                                        Su mensaje ha sido enviado. Gracias por contactarnos.
+                                    </h2>
+                                    <hr data-aos-once="true" data-aos="flip-left" className={`block mx-auto h-1 max-w-20 border-none bg-[#5fd2ff] mb-8`} />
+                                </div>
                             </div>
-                        </div>
-                    </section>
-                </>
-            } />
-      }
-    
+                        </section>
+                    </>
+                }
+            />
+        )
+    }
+
     return (
         <PlantillaUno
             contentc={
@@ -88,15 +90,15 @@ export default function Contacto() {
                                 <form className={`pb-12 px-6 gx:px-0  text-white font-Roboto text-base gx:text-lg`}
                                     onSubmit={handleSubmit}>
                                     <div className={`grid grid-cols-1 sm:grid-cols-2 gap-8 mb-5`}>
-                                        <input className={`flex-1 border-b-2 border-solid border-white bg-transparent p-1 lg:p-2 xl:p-3 focus:outline-none appearance-none placeholder:text-white `} type='text' placeholder='Nombre' />
-                                        <input className={`flex-1 border-b-2 border-solid border-white bg-transparent p-1 lg:p-2 xl:p-3 focus:outline-none placeholder:text-white `} type='text' placeholder='Apellido' />
+                                        <input className={`flex-1 border-b-2 border-solid border-white bg-transparent p-1 lg:p-2 xl:p-3 focus:outline-none appearance-none placeholder:text-white `} type='text' placeholder='Nombre' name='nombre' />
+                                        <input className={`flex-1 border-b-2 border-solid border-white bg-transparent p-1 lg:p-2 xl:p-3 focus:outline-none placeholder:text-white `} type='text' placeholder='Apellido' name='apellido' />
                                         <input className={`flex-1 border-b-2 border-solid border-white bg-transparent p-1 lg:p-2 xl:p-3 focus:outline-none appearance-none placeholder:text-white `} name='email' id='email' type='email' placeholder='Correo electrónico' />
                                         <ValidationError prefix="Email" field="email" errors={state.errors} />
-                                        <input className={`flex-1 border-b-2 border-solid border-white bg-transparent p-1 lg:p-2 xl:p-3 focus:outline-none appearance-none placeholder:text-white `} type='tel' placeholder='Número de teléfono' />
+                                        <input className={`flex-1 border-b-2 border-solid border-white bg-transparent p-1 lg:p-2 xl:p-3 focus:outline-none appearance-none placeholder:text-white `} type='tel' placeholder='Número de teléfono' name='telefono' />
                                     </div>
                                     <div className={`mb-5`}>
                                         <label htmlFor='experiencia' className={`block mb-2 appearance-none`}>¿Qué experiencia deportiva te interesa?</label>
-                                        <select id='experiencia' className={`w-full border-b-2 border-solid border-white bg-transparent p-0 lg:p-1 xl:p-2 focus:outline-none appearance-none rounded-none`}>
+                                        <select id='experiencia' name='experiencia' className={`w-full border-b-2 border-solid border-white bg-transparent p-0 lg:p-1 xl:p-2 focus:outline-none appearance-none rounded-none`}>
                                             <option value='hockey-academy-camp'>Camp</option>
                                             <option value='hockey-academy-camp-europa'>Camp Europa</option>
                                             <option value='hockey-academy-entrenamiento-academia'>Entrenamientos Academia</option>
