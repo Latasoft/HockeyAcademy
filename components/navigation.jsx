@@ -19,7 +19,10 @@ const navItems = [
     linkText: 'Campus Tecnificación Europa',
     subTitulos: [
       { linkText: 'Campus Eurohockey', href: '/eurohockey' },
-      { linkText: 'Hockey de Tecnificación', href: '/hockeytecnificacion' }
+      { linkText: 'Hockey de Tecnificación', href: '/hockeytecnificacion' },
+      { linkText: 'Mundial 2026 Fases de Grupos', href: '/mundialfasegrupos' },
+      { linkText: 'Mundial 2026 Fases Finales', href: '/mundialfasefinal' }
+
     ]
   },
 
@@ -151,7 +154,7 @@ export function Navigation() {
         </div>
 
         <div className="hidden md:grid grid-cols-2 gap-6 p-7">
-          <a href="https://www.facebook.com/identity.campus.arg/" target="_blank"><Image src={facebookIcon} alt="" /></a>
+          <a href="https://www.facebook.com/profile.php?id=100092632650074#" target="_blank"><Image src={facebookIcon} alt="" /></a>
           <a href="https://www.instagram.com/hockeyacademyok/" target="_blank"><Image src={instagramIcon} alt="" /></a>
           <a href="https://www.tiktok.com/@hockeyacademyok" target="_blank"><Image src={tiktokIcon} alt="" /></a>
           <a href="https://www.youtube.com/channel/UCug1CBwhTNIJ9rZFNGuu0_A" target="_blank"><Image src={youtubeIcon} alt="" /></a>

@@ -1,5 +1,6 @@
 
 import '../styles/globals.css';
+import WhatsAppButton from "../components/WhatsAppButton";
 import AOSInitializer from '../components/AOSInitializer';
 
 export const metadata = {
@@ -45,6 +46,8 @@ export default function RootLayout({ children }) {
             <body className={` antialiased text-black bg-[#12214d] font-Cabin `} >
                 <AOSInitializer />
                 {children}
+
+                <WhatsAppButton /> {/* 👈 aquí */}
             </body>
 
         </html>

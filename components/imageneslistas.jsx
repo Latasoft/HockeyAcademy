@@ -8,6 +8,9 @@ import EuroHockey2025Imagenes from './eurohockey2025imageneslista';
 import { MejorExperienciaImgsA, MejorExperienciaImgsB, MejorExperienciaImgsC } from './mejorexperienciaimageneslista';
 import { StuffImagenes, StuffPerfiles } from './stuffimageneslista';
 import { HAVerticalVideos, HAVerticalVideosPosters } from './verticalvideoslista';
+import Mundialfasegrupos from './mundialfasegruposimagenes';
+import mundialfasegruposexperiencia from './mundialfasegruposexperiencia';
+import mundialfasegruposgaleria from './mundialfasegruposgaleria';
 
 const ImagenesListas = {
     0: EurohockeyViajesGaleria,
@@ -26,7 +29,10 @@ const ImagenesListas = {
     13: MejorExperienciaImgsC,
     14: TextoLogo,
     15: HAVerticalVideos,
-    16: HAVerticalVideosPosters
+    16: HAVerticalVideosPosters,
+    17: Mundialfasegrupos,
+    18: mundialfasegruposexperiencia,
+    19: mundialfasegruposgaleria
 }
 
 export default ImagenesListas;
