@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { Footer } from "components/footer";
-import Cargador from 'components/cargador';
 
 export default function queesuncampodeportivo() {
     return (
@@ -12,7 +11,7 @@ export default function queesuncampodeportivo() {
                         poster='/images/euroHockey2025F.webp'
                         className='object-cover object-center w-full h-full'
                         preload="auto"
-                        autoPlay="autoplay"
+                        autoPlay
                         muted
                         loop
                         playsInline
@@ -31,20 +30,34 @@ export default function queesuncampodeportivo() {
                             data-aos="fade-up"
                             className={` w-full h-auto`}
                             src='/images/identitylogoblanco.png'
-                            alt=''
+                            alt='Identity Hockey'
                         />
                     </p>
 
-                    <h2 data-aos-once="true" data-aos="fade-up" className={` block mb-6 w-full relative text-center tracking-wide font-BebasNeue text-white text-4xl lg:text-5xl gx:text-6xl px-8 transition-all ease-in-out duration-100 `}>
+                    <h2
+                        data-aos-once="true"
+                        data-aos="fade-up"
+                        className={` block mb-6 w-full relative text-center tracking-wide font-BebasNeue text-white text-4xl lg:text-5xl gx:text-6xl px-8 transition-all ease-in-out duration-100 `}
+                    >
                         Campus deportivos en Europa
                     </h2>
 
-                    <p data-aos-once="true" data-aos="fade" className={`block mb-10 text-center `}>
-                        <Link className={` inline-block rounded-md bg-white bg-opacity-70 hover:bg-opacity-100 text-black text-sm sm:text-lg font-Roboto font-bold px-8 py-2 mx-2 sm:mx-3 transition-all ease-in-out duration-300 `} href=''>
+                    <p
+                        data-aos-once="true"
+                        data-aos="fade"
+                        className={`block mb-10 text-center `}
+                    >
+                        <Link
+                            className={` inline-block rounded-md bg-white bg-opacity-70 hover:bg-opacity-100 text-black text-sm sm:text-lg font-Roboto font-bold px-8 py-2 mx-2 sm:mx-3 transition-all ease-in-out duration-300 `}
+                            href="#"
+                        >
                             Hockey
                         </Link>
 
-                        <Link className={` inline-block rounded-md bg-white bg-opacity-70 hover:bg-opacity-100 text-black text-sm sm:text-lg font-Roboto font-bold px-8 py-2 mx-2 sm:mx-3 transition-all ease-in-out duration-300 `} href='./futbolmasculino'>
+                        <Link
+                            className={` inline-block rounded-md bg-white bg-opacity-70 hover:bg-opacity-100 text-black text-sm sm:text-lg font-Roboto font-bold px-8 py-2 mx-2 sm:mx-3 transition-all ease-in-out duration-300 `}
+                            href="./futbolmasculino"
+                        >
                             Fútbol masculino
                         </Link>
                     </p>
@@ -58,9 +71,11 @@ export default function queesuncampodeportivo() {
                     <h2 className={` text-center font-BebasNeue text-blue-950 text-4xl mx-8 mb-6 pt-12 `}>
                         Qué es un campus deportivo
                     </h2>
+
                     <hr className={` block mx-auto h-1 max-w-20 border-none bg-[#72efdd] mb-8 `} />
+
                     <div className={` font-Roboto text-lg leading-relaxed mb-4 text-justify hyphens-auto indent-5 `}>
-                        Los Campus deportivos son una experiencia de vida inolvidable...
+                        Los Campus deportivos son una experiencia de vida inolvidable para cualquier joven deportista. El objetivo principal de estas prácticas es mantener a los jóvenes ligados a la práctica deportiva, cultivándolos también a nivel cultural y turístico.
                     </div>
                 </div>
             </section>
@@ -70,9 +85,11 @@ export default function queesuncampodeportivo() {
                     <h2 className={` text-center font-BebasNeue text-blue-950 text-4xl mx-8 mb-6 pt-12 `}>
                         Enseñanzas y valores positivos
                     </h2>
+
                     <hr className={` block mx-auto h-1 max-w-20 border-none bg-[#72efdd] mb-8 `} />
+
                     <div className={` font-Roboto text-lg leading-relaxed mb-4 text-justify hyphens-auto indent-5 `}>
-                        Asimismo, podemos confirmar por nuestra experiencia personal...
+                        Asimismo, podemos confirmar por nuestra experiencia personal que, a través del deporte, se aprenden innumerables enseñanzas y valores positivos útiles para cualquier ámbito de la vida.
                     </div>
                 </div>
             </section>
@@ -82,9 +99,11 @@ export default function queesuncampodeportivo() {
                     <h2 className={` text-center font-BebasNeue text-blue-950 text-4xl mx-8 mb-6 pt-12 `}>
                         Amistad
                     </h2>
+
                     <hr className={` block mx-auto h-1 max-w-20 border-none bg-[#72efdd] mb-8 `} />
+
                     <div className={` font-Roboto text-lg leading-relaxed mb-4 text-justify hyphens-auto indent-5 `}>
-                        Otros aspectos a destacar es la posibilidad de generar nuevas amistades...
+                        Otros aspectos a destacar son la posibilidad de generar nuevas amistades, comprender nuevas culturas y costumbres, y vivir experiencias únicas junto al deporte.
                     </div>
                 </div>
             </section>
@@ -94,9 +113,11 @@ export default function queesuncampodeportivo() {
                     <h2 className={` text-center font-BebasNeue text-blue-950 text-4xl mx-8 mb-6 pt-12 `}>
                         Una experiencia inolvidable
                     </h2>
+
                     <hr className={` block mx-auto h-1 max-w-20 border-none bg-[#72efdd] mb-8 `} />
+
                     <div className={` font-Roboto text-lg leading-relaxed mb-4 text-justify hyphens-auto indent-5 `}>
-                        En fin, por todos estos aspectos...
+                        En fin, por todos estos aspectos y muchos más, nuestros Campus Deportivos representan una vivencia inolvidable y muy recomendable para cualquier joven apasionado por el deporte.
                     </div>
                 </div>
             </section>
@@ -107,6 +128,7 @@ export default function queesuncampodeportivo() {
                     className={` absolute inset-0 opacity-20 z-20 bg-center bg-repeat`}
                     style={{ backgroundImage: `url('/images/lineasPatron__.png')` }}
                 />
+
                 <Footer />
             </div>
 
