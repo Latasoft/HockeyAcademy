@@ -8,10 +8,10 @@ import hockeyacademycampsponsor06 from 'public/hockeyacademycamp/hockeyacademyca
 import hockeyacademycampsponsor07 from 'public/hockeyacademycamp/hockeyacademycamp_sponsor_07.png';
 import hockeyacademycampsponsor08 from 'public/hockeyacademycamp/hockeyacademycamp_sponsor_08.png';
 import hockeyacademycampsponsor09 from 'public/hockeyacademycamp/hockeyacademycamp_sponsor_09.png';
-import hockeyacademycampsponsor10 from 'public/hockeyacademycamp/hockeyacademycamp_sponsor_10.png';
+import hockeyacademycampsponsor10 from 'public/hockeyacademycamp/hockeyacademycamp_sponsor_10.PNG';
 import hockeyacademycampsponsor11 from 'public/hockeyacademycamp/hockeyacademycamp_sponsor_11.png';
 import hockeyacademycampsponsor12 from 'public/hockeyacademycamp/hockeyacademycamp_sponsor_12.png';
-import hockeyacademycampsponsor13 from 'public/hockeyacademycamp/hockeyacademycamp_sponsor_13.png';
+import hockeyacademycampsponsor13 from 'public/hockeyacademycamp/hockeyacademycamp_sponsor_13.PNG';
 
 
 
