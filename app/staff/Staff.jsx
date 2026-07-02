@@ -64,7 +64,7 @@ export default function Staff() {
                                     nombre={item.nombre}
                                     soy={item.soy}
                                     {...(item.otoSoy && { otoSoy: item.otoSoy })}
-                                    dimension="-top-10 w-full h-auto" />
+                                    dimension="inset-0 w-full h-full object-cover object-[center_70%]" />
                             ))}
                         </div>
                     )}
