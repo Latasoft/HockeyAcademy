@@ -121,7 +121,7 @@ export default function Eventosproximos() {
                             titulo="Hockey Academy Camp en Videos" />
 
                     <ViajesGaleria
-                        imageneslista="1"
+                        imageneslista="20"
                         titulo="Hockey Academy Camp en Imágenes" />
 
                     <section data-aos-once="true" data-aos="fade-up" className={` relative mx-auto max-w-5xl pt-32`}>

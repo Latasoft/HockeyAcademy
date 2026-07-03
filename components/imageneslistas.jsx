@@ -1,6 +1,7 @@
 
 import EurohockeyViajesGaleria from './eurohockeyimageneslista';
 import HockeyAcademyImagenesImports from './hockeyacademyimageneslista';
+import HockeyAcademyImagenes2026 from './hockeyacademyimagenes2026lista';
 import { SponsorsHA, AlianzEstrtgHA, HACards, BeneficiosHACard, TextoLogo } from './hockeyacademysponsorslista';
 import FutbolViajes from './futbolimagenes';
 import HockeyTecnificacion from './hockeytecnificacionimageneslista';
@@ -32,7 +33,8 @@ const ImagenesListas = {
     16: HAVerticalVideosPosters,
     17: Mundialfasegrupos,
     18: mundialfasegruposexperiencia,
-    19: mundialfasegruposgaleria
+    19: mundialfasegruposgaleria,
+    20: [...HockeyAcademyImagenesImports, ...HockeyAcademyImagenes2026]
 }
 
 export default ImagenesListas;

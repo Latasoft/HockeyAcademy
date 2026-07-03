@@ -16,7 +16,7 @@ export default function HAenimagenes() {
     useEffect(() => {
 
         const imageSources = [
-            ...ImagenesListas[1],
+            ...ImagenesListas[20].slice(0, 6),
           ];
 
         preloadImages(imageSources).then(() => setLoading(false));
@@ -105,7 +105,7 @@ export default function HAenimagenes() {
                     <section className={` relative mx-auto max-w-5xl pt-36`}>
                         <h2 data-aos-once="true" data-aos="fade-up" className={` text-center tracking-wide font-BebasNeue text-blue-950 text-4xl mx-8 mb-6`}>Hockey Academy en Imágenes</h2>
                         <hr data-aos-once="true" data-aos="flip-left" className={` block mx-auto h-1 max-w-20 border-none bg-[#5fd2ff] mb-12 `} />
-                        <ImagenesGrid imageneslista="1" />
+                        <ImagenesGrid imageneslista="20" />
                     </section>
 
                     <section className={` relative mx-auto max-w-5xl z-30 py-28 `}>

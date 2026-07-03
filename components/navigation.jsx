@@ -40,27 +40,6 @@ const navItems = [
   { linkText: 'Capacitaciones', href: '/capacitaciones' },
   { linkText: 'Sponsors y Alianzas', href: '/sponsors' },
 
-  {
-    linkText: 'Viajes Deportivos',
-    subTitulos: [
-      {
-        linkText: 'Tecnificaciones BCN Paises Bajos',
-        href: 'https://identitycampus.com/viajes-deportivos/tecnificaciones-bcn-paises-bajos/',
-        external: true
-      },
-      {
-        linkText: 'Mundial Fase Grupos',
-        href: 'https://identitycampus.com/viajes-deportivos/mundial-fase-grupos/', 
-        external: true
-      },
-      {
-        linkText: 'Mundial 2026 Fase Finales',
-        href: 'https://identitycampus.com/viajes-deportivos/mundial-2026-fases-de-finales/',
-        external: true
-      }
-    ]
-  },
-
   { linkText: 'Contacto', href: '/contacto' }
 ];
 

@@ -118,7 +118,7 @@ export default function Page() {
                             titulo="Hockey Academy Camp en Videos" />
 
                         <ViajesGaleria
-                            imageneslista="1"
+                            imageneslista="20"
                             titulo="Hockey Academy Camp en Imágenes" />
 
                         <section data-aos-once="true" data-aos="fade-up" className={` relative mx-auto max-w-5xl z-30 pt-32`}>
